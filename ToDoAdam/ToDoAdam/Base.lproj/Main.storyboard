@@ -38,6 +38,9 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="y1D-WD-ewB"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eO8-Uz-PMP">
                                         <rect key="frame" x="162" y="146" width="212" height="30"/>
@@ -68,7 +71,16 @@
                                                 <exclude reference="MaO-Ks-GrJ"/>
                                             </mask>
                                         </variation>
+                                        <connections>
+                                            <action selector="onLoginButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Cae-Oc-EGh"/>
+                                        </connections>
                                     </button>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="mHV-eo-pgt">
+                                        <rect key="frame" x="253" y="120" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="Voh-Qt-vVi"/>
+                                        </constraints>
+                                    </activityIndicatorView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -89,12 +101,14 @@
                                     <constraint firstAttribute="centerY" secondItem="eO8-Uz-PMP" secondAttribute="centerY" constant="-26" id="Kdn-As-zNT"/>
                                     <constraint firstItem="eO8-Uz-PMP" firstAttribute="centerX" secondItem="Mv0-Ib-GEz" secondAttribute="centerX" id="Kxu-Xm-gzd"/>
                                     <constraint firstAttribute="centerY" secondItem="Mv0-Ib-GEz" secondAttribute="centerY" id="SLe-Fy-ecP"/>
+                                    <constraint firstItem="mHV-eo-pgt" firstAttribute="centerY" secondItem="5KA-Ix-LvF" secondAttribute="centerY" id="TCJ-ed-EpD"/>
                                     <constraint firstItem="pij-iY-ex4" firstAttribute="top" secondItem="5KA-Ix-LvF" secondAttribute="top" constant="34" id="VCb-Cx-Nis"/>
                                     <constraint firstItem="pij-iY-ex4" firstAttribute="centerX" secondItem="eO8-Uz-PMP" secondAttribute="centerX" constant="0.5" id="Zfc-rd-tDu"/>
                                     <constraint firstAttribute="centerY" secondItem="pij-iY-ex4" secondAttribute="centerY" constant="89" id="c7G-c2-qzz"/>
                                     <constraint firstItem="TuL-GB-48l" firstAttribute="leading" secondItem="eO8-Uz-PMP" secondAttribute="leading" id="ckq-ho-YAo"/>
                                     <constraint firstItem="Mv0-Ib-GEz" firstAttribute="leading" secondItem="5KA-Ix-LvF" secondAttribute="leading" constant="219" id="dsN-3N-gqh"/>
                                     <constraint firstItem="eO8-Uz-PMP" firstAttribute="width" secondItem="Mv0-Ib-GEz" secondAttribute="width" id="fGJ-ML-ggv"/>
+                                    <constraint firstItem="TuL-GB-48l" firstAttribute="top" secondItem="mHV-eo-pgt" secondAttribute="bottom" constant="48" id="fWY-nb-kt8"/>
                                     <constraint firstItem="eO8-Uz-PMP" firstAttribute="width" secondItem="Mv0-Ib-GEz" secondAttribute="width" id="hU2-hF-lm4"/>
                                     <constraint firstItem="Mv0-Ib-GEz" firstAttribute="top" secondItem="pij-iY-ex4" secondAttribute="bottom" constant="29" id="iT1-Cw-uDb"/>
                                     <constraint firstItem="pij-iY-ex4" firstAttribute="top" secondItem="5KA-Ix-LvF" secondAttribute="top" constant="31" id="lk7-0C-iad"/>
@@ -102,6 +116,7 @@
                                     <constraint firstItem="eO8-Uz-PMP" firstAttribute="height" secondItem="TuL-GB-48l" secondAttribute="height" id="ptP-OQ-po7"/>
                                     <constraint firstItem="eO8-Uz-PMP" firstAttribute="top" secondItem="Mv0-Ib-GEz" secondAttribute="bottom" constant="23" id="qyW-8q-Wr3"/>
                                     <constraint firstItem="pij-iY-ex4" firstAttribute="centerX" secondItem="Mv0-Ib-GEz" secondAttribute="centerX" constant="1" id="rcq-ja-WQp"/>
+                                    <constraint firstItem="mHV-eo-pgt" firstAttribute="centerX" secondItem="eO8-Uz-PMP" secondAttribute="centerX" id="tp2-AS-zK7"/>
                                     <constraint firstItem="Mv0-Ib-GEz" firstAttribute="leading" secondItem="5KA-Ix-LvF" secondAttribute="leading" constant="219" id="wWk-nS-czK"/>
                                     <constraint firstItem="TuL-GB-48l" firstAttribute="top" secondItem="eO8-Uz-PMP" secondAttribute="bottom" constant="22" id="yaw-jG-kZp"/>
                                 </constraints>
@@ -136,25 +151,19 @@
                                         <exclude reference="hU2-hF-lm4"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="yPy-T5-Y0Y" appends="YES" id="so5-ty-9U4"/>
+                                    <outletCollection property="gestureRecognizers" destination="lDY-EV-FeH" appends="YES" id="GWU-JR-rSv"/>
+                                </connections>
                             </view>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="mHV-eo-pgt">
-                                <rect key="frame" x="285" y="154" width="30" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="30" id="Voh-Qt-vVi"/>
-                                </constraints>
-                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="5KA-Ix-LvF" secondAttribute="centerX" id="78J-Q1-Sfw"/>
-                            <constraint firstItem="Mv0-Ib-GEz" firstAttribute="height" secondItem="mHV-eo-pgt" secondAttribute="height" id="FoL-UJ-9DB"/>
                             <constraint firstAttribute="centerX" secondItem="5KA-Ix-LvF" secondAttribute="centerX" id="OCu-IO-WTY"/>
                             <constraint firstItem="5KA-Ix-LvF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="16" id="caO-Ir-wug"/>
                             <constraint firstAttribute="centerY" secondItem="5KA-Ix-LvF" secondAttribute="centerY" constant="67" id="emA-ow-StJ"/>
-                            <constraint firstItem="pij-iY-ex4" firstAttribute="centerX" secondItem="mHV-eo-pgt" secondAttribute="centerX" constant="0.5" id="gVB-IF-ggH"/>
-                            <constraint firstItem="Mv0-Ib-GEz" firstAttribute="centerX" secondItem="mHV-eo-pgt" secondAttribute="centerX" id="ihc-HF-sXp"/>
                             <constraint firstAttribute="trailingMargin" secondItem="5KA-Ix-LvF" secondAttribute="trailing" constant="16" id="vgY-mm-YwZ"/>
-                            <constraint firstItem="Mv0-Ib-GEz" firstAttribute="top" secondItem="mHV-eo-pgt" secondAttribute="bottom" constant="7" id="xQu-ID-xxX"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -164,8 +173,16 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="Fbv-U1-4lg"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="mHV-eo-pgt" id="z2H-Ry-aiu"/>
+                        <outlet property="emailTextField" destination="Mv0-Ib-GEz" id="ucu-Cw-biE"/>
+                        <outlet property="loginButton" destination="TuL-GB-48l" id="ytA-T1-cCc"/>
+                        <outlet property="passwordTextField" destination="eO8-Uz-PMP" id="glb-Hu-bjz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="yPy-T5-Y0Y"/>
+                <tapGestureRecognizer id="lDY-EV-FeH"/>
             </objects>
             <point key="canvasLocation" x="957" y="-306"/>
         </scene>
