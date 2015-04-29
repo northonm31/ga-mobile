@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6643E5EC1AF0E8840012FFD9 /* LoginButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6643E5EB1AF0E8840012FFD9 /* LoginButtonView.swift */; };
 		66CCD97C1AF0A80200F7DF3B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CCD97B1AF0A80200F7DF3B /* AppDelegate.swift */; };
-		66CCD97E1AF0A80200F7DF3B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CCD97D1AF0A80200F7DF3B /* ViewController.swift */; };
 		66CCD9811AF0A80200F7DF3B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66CCD97F1AF0A80200F7DF3B /* Main.storyboard */; };
 		66CCD9831AF0A80200F7DF3B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66CCD9821AF0A80200F7DF3B /* Images.xcassets */; };
 		66CCD9861AF0A80200F7DF3B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66CCD9841AF0A80200F7DF3B /* LaunchScreen.xib */; };
@@ -29,10 +29,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6643E5EB1AF0E8840012FFD9 /* LoginButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginButtonView.swift; sourceTree = "<group>"; };
 		66CCD9761AF0A80200F7DF3B /* ToDoAdam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoAdam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66CCD97A1AF0A80200F7DF3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		66CCD97B1AF0A80200F7DF3B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		66CCD97D1AF0A80200F7DF3B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		66CCD9801AF0A80200F7DF3B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		66CCD9821AF0A80200F7DF3B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		66CCD9851AF0A80200F7DF3B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -84,12 +84,12 @@
 			isa = PBXGroup;
 			children = (
 				66CCD97B1AF0A80200F7DF3B /* AppDelegate.swift */,
-				66CCD97D1AF0A80200F7DF3B /* ViewController.swift */,
 				66CCD97F1AF0A80200F7DF3B /* Main.storyboard */,
 				66CCD9A51AF0B33B00F7DF3B /* LoginViewController.swift */,
 				66CCD9A71AF0B3D900F7DF3B /* AuthDataManager.swift */,
-				66CCD9A31AF0AE1200F7DF3B /* ToDoView.swift */,
 				66CCD9821AF0A80200F7DF3B /* Images.xcassets */,
+				66CCD9A31AF0AE1200F7DF3B /* ToDoView.swift */,
+				6643E5EB1AF0E8840012FFD9 /* LoginButtonView.swift */,
 				66CCD9841AF0A80200F7DF3B /* LaunchScreen.xib */,
 				66CCD9791AF0A80200F7DF3B /* Supporting Files */,
 			);
@@ -222,10 +222,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				66CCD9A61AF0B33B00F7DF3B /* LoginViewController.swift in Sources */,
-				66CCD97E1AF0A80200F7DF3B /* ViewController.swift in Sources */,
 				66CCD9A41AF0AE1200F7DF3B /* ToDoView.swift in Sources */,
 				66CCD97C1AF0A80200F7DF3B /* AppDelegate.swift in Sources */,
 				66CCD9A81AF0B3D900F7DF3B /* AuthDataManager.swift in Sources */,
+				6643E5EC1AF0E8840012FFD9 /* LoginButtonView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -423,6 +423,7 @@
 				66CCD9971AF0A80200F7DF3B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		66CCD9981AF0A80200F7DF3B /* Build configuration list for PBXNativeTarget "ToDoAdamTests" */ = {
 			isa = XCConfigurationList;
@@ -431,6 +432,7 @@
 				66CCD99A1AF0A80200F7DF3B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

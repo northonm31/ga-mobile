@@ -8,7 +8,7 @@
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="Login View Controller" id="BYZ-38-t0r" customClass="LoginViewController" sceneMemberID="viewController">
+                <viewController title="Login View Controller" id="BYZ-38-t0r" customClass="LoginViewController" customModule="ToDoAdam" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -55,16 +55,23 @@
                                             </mask>
                                         </variation>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TuL-GB-48l">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TuL-GB-48l" customClass="LoginButtonView" customModule="ToDoAdam" customModuleProvider="target">
                                         <rect key="frame" x="162" y="198" width="212" height="30"/>
+                                        <color key="backgroundColor" red="0.0" green="0.50196081399917603" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="212" id="JdN-IL-Hyy"/>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="38" id="L50-y0-0OB"/>
                                             <constraint firstAttribute="width" constant="38" id="MaO-Ks-GrJ"/>
                                         </constraints>
                                         <state key="normal" title="Login">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <variation key="default">
                                             <mask key="constraints">
                                                 <exclude reference="L50-y0-0OB"/>
@@ -76,18 +83,19 @@
                                         </connections>
                                     </button>
                                     <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="mHV-eo-pgt">
-                                        <rect key="frame" x="253" y="120" width="30" height="30"/>
+                                        <rect key="frame" x="253" y="66" width="30" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="30" id="Voh-Qt-vVi"/>
                                         </constraints>
                                     </activityIndicatorView>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.90196079015731812" green="0.90196079015731812" blue="0.90196079015731812" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="eO8-Uz-PMP" firstAttribute="top" secondItem="Mv0-Ib-GEz" secondAttribute="bottom" constant="23" id="0qe-yV-qIn"/>
                                     <constraint firstItem="eO8-Uz-PMP" firstAttribute="top" secondItem="Mv0-Ib-GEz" secondAttribute="bottom" constant="23" id="38r-mR-Rmd"/>
                                     <constraint firstItem="eO8-Uz-PMP" firstAttribute="leading" secondItem="Mv0-Ib-GEz" secondAttribute="leading" id="3ox-5z-NLE"/>
                                     <constraint firstItem="pij-iY-ex4" firstAttribute="centerX" secondItem="5KA-Ix-LvF" secondAttribute="centerX" id="3px-dv-qMa"/>
+                                    <constraint firstItem="mHV-eo-pgt" firstAttribute="top" secondItem="pij-iY-ex4" secondAttribute="bottom" constant="2" id="62N-Lz-dfI"/>
                                     <constraint firstAttribute="centerY" secondItem="pij-iY-ex4" secondAttribute="centerY" constant="86" id="6Up-Uh-OhI"/>
                                     <constraint firstItem="eO8-Uz-PMP" firstAttribute="height" secondItem="Mv0-Ib-GEz" secondAttribute="height" id="8M9-C6-XRt"/>
                                     <constraint firstAttribute="height" constant="270" id="8yt-5X-4a4"/>
@@ -121,9 +129,6 @@
                                     <constraint firstItem="TuL-GB-48l" firstAttribute="top" secondItem="eO8-Uz-PMP" secondAttribute="bottom" constant="22" id="yaw-jG-kZp"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="keyPath">
-                                        <integer key="value" value="5"/>
-                                    </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                         <integer key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
@@ -149,6 +154,8 @@
                                         <exclude reference="Kdn-As-zNT"/>
                                         <exclude reference="Kxu-Xm-gzd"/>
                                         <exclude reference="hU2-hF-lm4"/>
+                                        <exclude reference="fWY-nb-kt8"/>
+                                        <exclude reference="TCJ-ed-EpD"/>
                                     </mask>
                                 </variation>
                                 <connections>
