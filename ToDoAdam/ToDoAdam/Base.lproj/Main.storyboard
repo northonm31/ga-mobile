@@ -82,7 +82,7 @@
                                             <action selector="onLoginButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Cae-Oc-EGh"/>
                                         </connections>
                                     </button>
-                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="mHV-eo-pgt">
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="mHV-eo-pgt">
                                         <rect key="frame" x="253" y="66" width="30" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="30" id="Voh-Qt-vVi"/>
